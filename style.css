@@ -1,0 +1,125 @@
+/* O Style.css é o arquivo que deixa o site bonito e com um visual profissional ===================================================== */
+
+/* =====================================================
+   CONFIGURAÇÃO GERAL E COMPORTAMENTO GLOBAL DO SITE
+   ===================================================== */
+
+html { 
+  scroll-behavior: smooth; /* Faz a rolagem da página ser suave */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Fonte padrão do site */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  opacity: 0; /* Começa invisível */
+  animation: aparecer 1s ease forwards; /* Animação suave de entrada */
+}
+
+.logo {
+  position: absolute; /* Deixa a logo fixa no canto */
+  top: 20px; /* Distância do topo */
+  left: 20px; /* Distância da lateral esquerda (pode ser 'right: 20px;' para o outro lado) */
+  width: 100px; /* Tamanho da logo (pode ajustar conforme o visual) */
+  height: auto; /* Mantém a proporção correta da imagem */
+  z-index: 10; /* Faz a logo ficar por cima do fundo */
+}
+
+/* Fundo transparente com texto por cima */
+.fundo-texto {
+  background-color: rgba(0, 0, 0, 0.3); /* Fundo preto com 50% de transparência */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Animação que faz o site aparecer suavemente ao carregar */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =====================================================
+   CABEÇALHO DO SITE (TOPO)
+   ===================================================== */
+
+/* Imagem de fundo do cabeçalho */
+header {
+  background-image: url('imagens/imagemexemplo.png'); /* Substitua pela URL da sua imagem */
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* =====================================================
+   SEÇÕES INTERNAS DO SITE
+   ===================================================== */
+
+section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05); /* Sombra suave */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+
+/* =====================================================
+   TÍTULOS DO SITE (H1, H2)
+   ===================================================== */
+
+h1,
+h2 {
+  margin-top: 0; /* Remove a margem superior padrão */
+}
+
+
+/* =====================================================
+   BOTÃO PRINCIPAL DO SITE
+   ===================================================== */
+
+.botao {
+  display: inline-block;
+  background-color: #ff9900;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.botao:hover {
+  background-color: #e68a00;
+  transform: scale(1.05);
+}
+
+
+/* =====================================================
+   RODAPÉ DO SITE
+   ===================================================== */
+
+footer {
+  background-color: #f1f1f1;
+  color: #555;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
