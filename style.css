@@ -1,0 +1,609 @@
+/* ----------------------------
+   BASE GERAL
+---------------------------- */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1E1E1E;
+  background-color: #ffffff;
+}
+
+/* ----------------------------
+   HERO (TOPO)
+---------------------------- */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('imagens/DOMINEWEB.png') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: whitesmoke;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Setas */
+.seta {
+  position: absolute;
+  width: 200px;
+  bottom: 190px;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-name: pulse;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+
+.seta.esquerda {
+  left: 15%;
+  animation-name: moverEsquerda;
+}
+
+
+.seta.direita {
+  right: 15%;
+  animation-name: moverDireita;
+}
+/* Animações */
+@keyframes moverEsquerda {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(15px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes moverDireita {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-15px); }
+  100% { transform: translateX(0); }
+}
+
+.cta-principal {
+  animation: pulse 2.5s infinite;
+  transition: transform 0.3s ease, box-shadow 0.6s ease;
+  background-color: #A9FF00;
+  color: #1E1E1E;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.cta-principal:hover {
+  background-color: #8be700;
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #b5ff00;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ----------------------------
+   BLOCO: O LIMITE É SUA IMAGINAÇÃO
+---------------------------- */
+.bloco-imaginacao {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 60px 20px;
+  color: #1E1E1E;
+}
+
+.bloco-imaginacao h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.imagens-comparacao {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.print {
+  max-width: 650px;
+  width: 100%;
+}
+
+.print img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.print p {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #555;
+}
+
+.frase-final {
+  font-size: 20px;
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ----------------------------
+   APRENDIZADO
+---------------------------- */
+.aprendizado-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.imagem-capa img {
+  height: 400px;
+  width: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.preco-abaixo-ebook {
+  text-align: center;
+  font-size: 16px;
+  color: #1E1E1E;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.texto-aprendizado {
+  max-width: 600px;
+}
+
+.texto-aprendizado h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.texto-aprendizado ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.texto-aprendizado li {
+  font-size: 18px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.cta-aprendizado {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.btn-outline {
+  display: inline-block; /* <--- ESSENCIAL */
+  background-color: transparent;
+  border: 2px solid #b5ff00;
+  color: #b5ff00;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+.btn-outline:hover {
+  background-color: #b5ff00;
+  color: black;
+  transform: translateY(-5px); /* Efeito de vir pra frente */
+}
+
+/* ----------------------------
+   COMPARATIVO DE PLANOS
+---------------------------- */
+.comparativo {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.comparativo h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.tabela-comparacao {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.coluna {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  max-width: 300px;
+  width: 100%;
+  text-align: left;
+}
+
+.coluna.destaque {
+  border: 2px solid #A9FF00;
+}
+
+.coluna h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.coluna ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.coluna li {
+  font-size: 16px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+}
+
+.coluna li:first-child {
+  border-top: none;
+}
+
+.frase-comparacao {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* ----------------------------
+   BENEFÍCIOS COM ILUSTRAÇÃO
+---------------------------- */
+.beneficios-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px; /* espaço entre os dois */
+  padding: 60px 20px;
+}
+
+.ilustracao-beneficio {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ilustracao-beneficio img {
+  max-width: 300px;
+  height: auto;
+  margin-left: 40px; /* aproxima mais do centro */
+  margin-top: 70px; /* 🔽 AQUI você controla o quanto ela desce */
+}
+
+.beneficios-texto {
+  max-width: 700px;
+  margin-left: -10px; /* puxa levemente a imagem para esquerda */
+}
+
+.beneficios-texto h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.beneficios-texto ul {
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.beneficios-texto li {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* ----------------------------
+   BENEFÍCIOS SIMPLES (VERSÃO ANTIGA)
+---------------------------- */
+.beneficios {
+  background-color: #ffffff;
+  color: #1E1E1E;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.beneficios h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.beneficios ul {
+  list-style: disc;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.beneficios li {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.preco-cta {
+  font-size: 16px;
+  margin: 10px 0 20px;
+  color: #1E1E1E;
+  font-weight: 500;
+}
+
+/* ----------------------------
+      RODAPÉ
+---------------------------- */
+
+.rodape {
+  background-color: #f1f1f1;
+  padding: 30px 20px;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+  margin-top: 0px;
+}
+
+.rodape a {
+  color: #1E1E1E;
+  text-decoration: none;
+}
+
+.rodape a:hover {
+  text-decoration: underline;
+}
+
+.rodape .aviso {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #888;
+}
+
+.cta-final {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #ffffff;
+  color: #050505;
+}
+
+.cta-rodapé {
+display: inline-block;
+margin-top: 20px;
+padding: 15px 30px;
+background-color: #A9FF00;
+color: #1E1E1E;
+font-weight: bold;
+text-decoration: none;
+border-radius: 8px;
+font-size: 16px;
+transition: all 0.3s ease;
+}
+
+
+
+.cta-rodapé:hover {
+  background-color: #8be700;
+  box-shadow: 0 0 15px #b5ff00;
+  transform: scale(1.05);
+}
+
+.cta-final h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ----------------------------
+   RESPONSIVO (MOBILE)
+---------------------------- */
+@media (max-width: 768px) {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Hero */
+  .hero {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+
+
+  .hero-content {
+    padding: 0 16px !important;
+    width: 100%;
+    text-align: center;
+  }
+
+  
+  .hero-content h1 {
+    font-size: 28px !important;
+  }
+
+  .hero-content p {
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: keep-all;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .cta-principal {
+    margin-top: 20px;
+    font-size: 16px !important;
+    padding: 12px 24px !important;
+    width: 90%;
+    max-width: 300px;
+  }
+
+
+  .seta {
+    display: none !important;
+  }
+
+  /* Bloco Imaginacao */
+  .print {
+    max-width: 100%;
+  }
+
+  .frase-final {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  /* Aprendizado */
+  .aprendizado-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .imagem-capa img {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .texto-aprendizado {
+    width: 100%;
+    padding: 0 16px;
+    text-align: left;
+  }
+
+  .texto-aprendizado h2 {
+    text-align: center;
+  }
+
+  .texto-aprendizado ul {
+    padding-left: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Botão aprendizado */
+  .btn-outline {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* Comparativo */
+  .tabela-comparacao {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Benefícios com imagem */
+  .beneficios-flex {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .beneficios-texto {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .beneficios-texto h2 {
+    text-align: center;
+  }
+
+  .beneficios-texto ul {
+    padding-left: 20px;
+  }
+
+  .ilustracao-beneficio {
+    justify-content: center;
+  }
+
+  .ilustracao-beneficio img {
+    width: 70%;
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Rodapé */
+  .rodape {
+    padding: 20px 10px;
+  }
+
+  .rodape p,
+  .rodape .aviso {
+    font-size: 13px;
+  }
+
+  .cta-final h2 {
+    font-size: 1.5em;
+    padding: 0 10px;
+  }
+
+  .cta-rodapé {
+    font-size: 15px;
+    padding: 12px 20px;
+    width: 90%;
+    max-width: 300px;
+  }
+}
