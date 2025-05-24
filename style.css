@@ -15,8 +15,6 @@ body {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
               url('imagens/DOMINEWEB.png') no-repeat center center;
   background-size: cover;
-  text-align: center;
-  color: white;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -24,6 +22,7 @@ body {
   text-align: center;
   color: whitesmoke;
   padding: 20px;
+  position: relative;
 }
 
 .hero-content h1 {
@@ -46,27 +45,20 @@ body {
 .seta {
   position: absolute;
   width: 200px;
-  bottom: 190px;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  animation-name: pulse;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  animation: pulse 2.5s infinite ease-in-out;
 }
 
 
 .seta.esquerda {
-  left: 15%;
   animation-name: moverEsquerda;
 }
 
 
 .seta.direita {
-  right: 15%;
+  right: 10%;
   animation-name: moverDireita;
 }
+
 /* Animações */
 @keyframes moverEsquerda {
   0% { transform: translateX(0); }
@@ -91,6 +83,7 @@ body {
   font-size: 18px;
   margin-top: 10px;
   font-weight: bold;
+  max-width: 500px;
 }
 
 .cta-principal:hover {
@@ -105,12 +98,95 @@ body {
 }
 
 /* ----------------------------
+   VANTAGENS DE TER UM SITE
+---------------------------- */
+.dupla-coluna {
+  display: flex;
+  align-items: center; /* 🔥 Isso centraliza a imagem na altura do texto */
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  padding-left: 150px; /* aumenta a distância da borda esquerda */
+
+}
+
+.coluna-texto {
+  flex: 1;
+  min-width: 300px;
+  max-width: 700px;
+  text-align: left;
+}
+
+.coluna-texto h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.coluna-texto ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.coluna-texto li {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.coluna-imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 300px; /* 🔥 empurra para a direita */
+}
+
+.coluna-imagem img {
+  max-width: 350px;
+  height: auto;
+  margin: 0;             /* REMOVE o margin-top que está empurrando ela pra baixo */
+}
+
+.texto-desktop {
+  display: block;
+}
+
+.texto-mobile {
+  display: none;
+}
+.beneficio-unico {
+  font-size: 25px; /* 👈 Aqui você controla o tamanho */
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0,0,0,0.4);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 1.6;
+  margin-top: 10px;
+  max-width: 95vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 2px 2px 4px black;
+}
+
+.desktop-only {
+  display: inline;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* ----------------------------
    BLOCO: O LIMITE É SUA IMAGINAÇÃO
 ---------------------------- */
 .bloco-imaginacao {
   background-color: #f9f9f9;
   text-align: center;
-  padding: 60px 20px;
+  padding: 120px 20px; /* Aumente aqui */
   color: #1E1E1E;
 }
 
@@ -439,171 +515,212 @@ html, body {
   overflow-x: hidden;
 }
 
+
+
 /* ----------------------------
    RESPONSIVO (MOBILE)
 ---------------------------- */
-@media (max-width: 768px) {
-  html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  body {
-    overflow-x: hidden;
-  }
+    @media (max-width: 768px) {
+      body {
+        overflow-x: hidden;
+      }
 
-  /* Hero */
-  .hero {
-    height: 100vh !important;
-    min-height: 100vh !important;
-    width: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    padding: 20px !important;
-    box-sizing: border-box !important;
-  }
+      /* Mostra só a versão mobile do texto personalizado */
+      .desktop-only {
+        display: none;
+      }
 
+      .mobile-only {
+        display: inline-block;
+      }
 
+      /* Hero */
+      .hero {
+        height: 100vh !important;
+        min-height: 100vh !important;
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        padding: 20px !important;
+        box-sizing: border-box !important;
+      }
 
-  .hero-content {
-    padding: 0 16px !important;
-    width: 100%;
-    text-align: center;
-  }
+      .hero-content {
+        padding: 0 16px !important;
+        width: 100%;
+        text-align: center;
+      }
 
-  
-  .hero-content h1 {
-    font-size: 28px !important;
-  }
+      .hero-content h1 {
+        font-size: 28px !important;
+      }
 
-  .hero-content p {
-    white-space: nowrap;
-    overflow-wrap: normal;
-    word-break: keep-all;
-    font-size: 16px;
-    line-height: 1.4;
-  }
+      .hero-content p {
+        font-size: 16px;
+        line-height: 1.5;
+        white-space: normal !important;
+        word-break: break-word !important;
+      }
 
-  .cta-principal {
-    margin-top: 20px;
-    font-size: 16px !important;
-    padding: 12px 24px !important;
-    width: 90%;
-    max-width: 300px;
-  }
+      .cta-principal {
+        margin-top: 20px;
+        font-size: 16px !important;
+        padding: 12px 24px !important;
+        width: 90%;
+        max-width: 300px;
+      }
 
+      /* Vantagens de ter um site */
+      .dupla-coluna {
+        flex-direction: column;
+        padding: 40px 20px;
+        padding-left: 20px;
+        margin: 0 auto;
+      }
 
-  .seta {
-    display: none !important;
-  }
+      .coluna-texto {
+        text-align: left;
+        max-width: 100%;
+      }
 
-  /* Bloco Imaginacao */
-  .print {
-    max-width: 100%;
-  }
+      .coluna-imagem {
+        margin: 40px 0 0 0;
+        justify-content: center;
+        margin-right: 0;
+      }
 
-  .frase-final {
-    font-size: 16px;
-    padding: 0 10px;
-  }
+      .coluna-imagem img {
+        max-width: 90%;
+      }
 
-  /* Aprendizado */
-  .aprendizado-flex {
-    flex-direction: column;
-    gap: 20px;
-  }
+      .texto-desktop {
+        display: none;
+      }
 
-  .imagem-capa img {
-    width: 100% !important;
-    max-width: 320px !important;
-    height: auto !important;
-    display: block;
-    margin: 0 auto;
-  }
+      .texto-mobile {
+        display: block;
+        line-height: 1.6;
+        font-weight: bold;
+        color: white;
+        background-color: rgba(0,0,0,0.4);
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
 
-  .texto-aprendizado {
-    width: 100%;
-    padding: 0 16px;
-    text-align: left;
-  }
+      /* Setas */
+      .seta {
+        display: none !important;
+      }
 
-  .texto-aprendizado h2 {
-    text-align: center;
-  }
+      /* Bloco Imaginacao */
+      .print {
+        max-width: 100%;
+      }
 
-  .texto-aprendizado ul {
-    padding-left: 20px;
-    max-width: 100%;
-    margin: 0 auto;
-  }
+      .frase-final {
+        font-size: 16px;
+        padding: 0 10px;
+      }
 
-  /* Botão aprendizado */
-  .btn-outline {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
+      /* Aprendizado */
+      .aprendizado-flex {
+        flex-direction: column;
+        gap: 20px;
+      }
 
-  /* Comparativo */
-  .tabela-comparacao {
-    flex-direction: column;
-    align-items: center;
-  }
+      .imagem-capa img {
+        width: 100% !important;
+        max-width: 320px !important;
+        height: auto !important;
+        display: block;
+        margin: 0 auto;
+      }
 
-  /* Benefícios com imagem */
-  .beneficios-flex {
-    flex-direction: column;
-    padding: 40px 20px;
-    gap: 30px;
-  }
+      .texto-aprendizado {
+        width: 100%;
+        padding: 0 16px;
+        text-align: left;
+      }
 
-  .beneficios-texto {
-    width: 100%;
-    padding: 0 10px;
-  }
+      .texto-aprendizado h2 {
+        text-align: center;
+      }
 
-  .beneficios-texto h2 {
-    text-align: center;
-  }
+      .texto-aprendizado ul {
+        padding-left: 20px;
+        max-width: 100%;
+        margin: 0 auto;
+      }
 
-  .beneficios-texto ul {
-    padding-left: 20px;
-  }
+      /* Botão aprendizado */
+      .btn-outline {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
 
-  .ilustracao-beneficio {
-    justify-content: center;
-  }
+      /* Comparativo */
+      .tabela-comparacao {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  .ilustracao-beneficio img {
-    width: 70%;
-    max-width: 250px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
+      /* Benefícios com imagem */
+      .beneficios-flex {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 30px;
+      }
 
-  /* Rodapé */
-  .rodape {
-    padding: 20px 10px;
-  }
+      .beneficios-texto {
+        width: 100%;
+        padding: 0 10px;
+      }
 
-  .rodape p,
-  .rodape .aviso {
-    font-size: 13px;
-  }
+      .beneficios-texto h2 {
+        text-align: center;
+      }
 
-  .cta-final h2 {
-    font-size: 1.5em;
-    padding: 0 10px;
-  }
+      .beneficios-texto ul {
+        padding-left: 20px;
+      }
 
-  .cta-rodapé {
-    font-size: 15px;
-    padding: 12px 20px;
-    width: 90%;
-    max-width: 300px;
-  }
-}
+      .ilustracao-beneficio {
+        justify-content: center;
+      }
+
+      .ilustracao-beneficio img {
+        width: 70%;
+        max-width: 250px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+      }
+
+      /* Rodapé */
+      .rodape {
+        padding: 20px 10px;
+      }
+
+      .rodape p,
+      .rodape .aviso {
+        font-size: 13px;
+      }
+
+      .cta-final h2 {
+        font-size: 1.5em;
+        padding: 0 10px;
+      }
+
+      .cta-rodapé {
+        font-size: 15px;
+        padding: 12px 20px;
+        width: 90%;
+        max-width: 300px;
+      }
+    }
