@@ -1,6 +1,4 @@
-/* ----------------------------
-   BASE GERAL
----------------------------- */
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -8,9 +6,7 @@ body {
   background-color: #ffffff;
 }
 
-/* ----------------------------
-   HERO (TOPO)
----------------------------- */
+
 .hero {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
               url('imagens/DOMINEWEB.png') no-repeat center center;
@@ -41,7 +37,7 @@ body {
   align-items: center;
 }
 
-/* Setas */
+
 .seta {
   position: absolute;
   width: 200px;
@@ -59,7 +55,7 @@ body {
   animation-name: moverDireita;
 }
 
-/* Animações */
+
 @keyframes moverEsquerda {
   0% { transform: translateX(0); }
   50% { transform: translateX(15px); }
@@ -97,17 +93,15 @@ body {
   100% { transform: scale(1); }
 }
 
-/* ----------------------------
-   VANTAGENS DE TER UM SITE
----------------------------- */
+
 .dupla-coluna {
   display: flex;
-  align-items: center; /* 🔥 Isso centraliza a imagem na altura do texto */
+  align-items: center; 
   justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
   padding: 60px 40px;
-  padding-left: 150px; /* aumenta a distância da borda esquerda */
+  padding-left: 150px; 
 
 }
 
@@ -139,13 +133,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 300px; /* 🔥 empurra para a direita */
+  margin-right: 300px; 
 }
 
 .coluna-imagem img {
   max-width: 350px;
   height: auto;
-  margin: 0;             /* REMOVE o margin-top que está empurrando ela pra baixo */
+  margin: 0;            
 }
 
 .texto-desktop {
@@ -156,7 +150,7 @@ body {
   display: none;
 }
 .beneficio-unico {
-  font-size: 25px; /* 👈 Aqui você controla o tamanho */
+  font-size: 25px; 
   font-weight: bold;
   color: white;
   background-color: rgba(0,0,0,0.4);
@@ -180,13 +174,11 @@ body {
   display: none;
 }
 
-/* ----------------------------
-   BLOCO: O LIMITE É SUA IMAGINAÇÃO
----------------------------- */
+
 .bloco-imaginacao {
   background-color: #f9f9f9;
   text-align: center;
-  padding: 120px 20px; /* Aumente aqui */
+  padding: 120px 20px; 
   color: #1E1E1E;
 }
 
@@ -230,9 +222,7 @@ body {
   margin: 0 auto;
 }
 
-/* ----------------------------
-   APRENDIZADO
----------------------------- */
+
 .aprendizado-flex {
   display: flex;
   flex-wrap: wrap;
@@ -285,7 +275,7 @@ body {
 }
 
 .btn-outline {
-  display: inline-block; /* <--- ESSENCIAL */
+  display: inline-block;
   background-color: transparent;
   border: 2px solid #b5ff00;
   color: #b5ff00;
@@ -302,12 +292,10 @@ body {
 .btn-outline:hover {
   background-color: #b5ff00;
   color: black;
-  transform: translateY(-5px); /* Efeito de vir pra frente */
+  transform: translateY(-5px); 
 }
 
-/* ----------------------------
-   COMPARATIVO DE PLANOS
----------------------------- */
+
 .comparativo {
   background-color: #f9f9f9;
   text-align: center;
@@ -368,14 +356,12 @@ body {
   margin-top: 20px;
 }
 
-/* ----------------------------
-   BENEFÍCIOS COM ILUSTRAÇÃO
----------------------------- */
+
 .beneficios-flex {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px; /* espaço entre os dois */
+  gap: 60px;
   padding: 60px 20px;
 }
 
@@ -388,13 +374,13 @@ body {
 .ilustracao-beneficio img {
   max-width: 300px;
   height: auto;
-  margin-left: 40px; /* aproxima mais do centro */
-  margin-top: 70px; /* 🔽 AQUI você controla o quanto ela desce */
+  margin-left: 40px; 
+  margin-top: 70px;
 }
 
 .beneficios-texto {
   max-width: 700px;
-  margin-left: -10px; /* puxa levemente a imagem para esquerda */
+  margin-left: -10px; 
 }
 
 .beneficios-texto h2 {
@@ -414,9 +400,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* ----------------------------
-   BENEFÍCIOS SIMPLES (VERSÃO ANTIGA)
----------------------------- */
+
 .beneficios {
   background-color: #ffffff;
   color: #1E1E1E;
@@ -450,9 +434,7 @@ body {
   font-weight: 500;
 }
 
-/* ----------------------------
-      RODAPÉ
----------------------------- */
+
 
 .rodape {
   background-color: #f1f1f1;
@@ -517,15 +499,13 @@ html, body {
 
 
 
-/* ----------------------------
-   RESPONSIVO (MOBILE)
----------------------------- */
+
     @media (max-width: 768px) {
       body {
         overflow-x: hidden;
       }
 
-      /* Mostra só a versão mobile do texto personalizado */
+   
       .desktop-only {
         display: none;
       }
@@ -534,7 +514,7 @@ html, body {
         display: inline-block;
       }
 
-      /* Hero */
+      
       .hero {
         height: 100vh !important;
         min-height: 100vh !important;
@@ -574,7 +554,7 @@ html, body {
         max-width: 300px;
       }
 
-      /* Vantagens de ter um site */
+  
       .dupla-coluna {
         flex-direction: column;
         padding: 40px 20px;
@@ -612,12 +592,12 @@ html, body {
         margin-top: 10px;
       }
 
-      /* Setas */
+   
       .seta {
         display: none !important;
       }
 
-      /* Bloco Imaginacao */
+    
       .print {
         max-width: 100%;
       }
@@ -627,7 +607,7 @@ html, body {
         padding: 0 10px;
       }
 
-      /* Aprendizado */
+    
       .aprendizado-flex {
         flex-direction: column;
         gap: 20px;
@@ -657,20 +637,20 @@ html, body {
         margin: 0 auto;
       }
 
-      /* Botão aprendizado */
+      
       .btn-outline {
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
       }
 
-      /* Comparativo */
+  
       .tabela-comparacao {
         flex-direction: column;
         align-items: center;
       }
 
-      /* Benefícios com imagem */
+  
       .beneficios-flex {
         flex-direction: column;
         padding: 40px 20px;
@@ -702,7 +682,7 @@ html, body {
         display: block;
       }
 
-      /* Rodapé */
+    
       .rodape {
         padding: 20px 10px;
       }
